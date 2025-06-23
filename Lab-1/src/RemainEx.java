@@ -171,6 +171,137 @@ public class RemainEx {
             }
         }
     }
+    static void Ex7_1 () {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("input num n: ");
+        int n = sc.nextInt();
+        int [] arr = new int[n];
+        for (int i=0;i<n;i++) {
+            System.out.print("input integers: ");
+            arr[i]= sc.nextInt();
+        }
+        int sum =arr[0] +arr[n-1];
+        System.out.println("sum of the first and last element in array is "+sum);
+    }
+    static void Ex7_2 () {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("input num n: ");
+        int n = sc.nextInt();
+        int [] arr = new int[n];
+        for (int i=0;i<n;i++) {
+            System.out.print("input integers: ");
+            arr[i]= sc.nextInt();
+        }
+        boolean even=false;
+        for (int i=0;i<n;i++) {
+            if (arr[i]%2==0) {
+                System.out.println("even number: "+arr[i]);
+                even=true;
+            }
+        }
+        if (even==false) {
+            System.out.println("nothing.");
+        }
+    }
+    static void Ex7_3 () {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("input num n: ");
+        int n = sc.nextInt();
+        int [] arr = new int[n];
+        for (int j=0;j<n;j++) {
+            System.out.print("input integers: ");
+            arr[j]= sc.nextInt();
+        }
+        System.out.print("input num k: ");
+        int k = sc.nextInt();
+        int count=0;
+        for (int i=0;i<n;i++) {
+            if(arr[i]==k){
+                count++;
+            }
+        }
+        System.out.println(count);
+    }
+    static void Ex7_4 () {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("input num n: ");
+        int n = sc.nextInt();
+        int [] arr = new int[n];
+        int sum=0;
+        for (int i=0;i<n;i++) {
+            System.out.print("input integers: ");
+            arr[i]= sc.nextInt();
+        }
+        for (int i=0;i<n;i++) {
+            if (arr[i]%2!=0&&arr[i]>0) {
+                sum=sum+arr[i];
+            }
+        }
+        System.out.println("sum of all positive numbers is "+sum);
+    }
+    static void Ex7_5 () {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("input num n: ");
+        int n = sc.nextInt();
+        int [] arr = new int[n];
+        for (int i=0;i<n;i++) {
+            System.out.print("input integers: ");
+            arr[i]= sc.nextInt();
+        }
+        boolean Inrange=false;
+        for (int i=0;i<n;i++) {
+            if (arr[i]>=0&&arr[i]<=10) {
+                System.out.println(arr[i]);
+                Inrange=true;
+            }
+        }
+        if (!Inrange) {
+            System.out.println("no output.");
+        }
+    }
+    static void Ex7_6 () {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("input num n: ");
+        int n = sc.nextInt();
+        int [] arr = new int[n];
+        for (int i=0;i<n;i++) {
+            System.out.print("input integers: ");
+            arr[i]= sc.nextInt();
+        }
+        for (int i=1;i<n;i++) {
+            int tmp = arr[i];
+            int j;
+            for (j=i;j>0&&tmp<arr[j-1];j--) {
+                arr[j]=arr[j-1];
+            }arr[j]=tmp;
+        }
+        for (int i=0;i<n;i++) {
+            System.out.print(arr[i]+" ");
+        }
+    }
+    static void Ex7_7 () {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("input row r: ");
+        int r = sc.nextInt();
+        System.out.print("input col c: ");
+        int c = sc.nextInt();
+        int[][] arr = new int[r][c];
+        for (int i=0;i<r;i++) {
+            for (int j=0;j<c;j++) {
+                System.out.print("arr["+i+"]"+"["+j+"]"+":"+" ");
+                arr[i][j]=sc.nextInt();
+            }
+        }
+        int sum =0;
+        for (int i=0;i<r;i++) {
+            for (int j=0;j<c;j++) {
+                if (arr[i][j]%5==0) {
+                    sum=sum+arr[i][j];
+                }
+            }
+        }
+        System.out.println("sum of all numbers that are divisible by 5 is "+sum);
+    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         //Ex5_1();
@@ -184,9 +315,16 @@ public class RemainEx {
         //Ex6_6();
         //Ex6_7();
         //Ex6_8();
-        Ex6_9();
-        Ex6_10();
-        Ex6_11();
+        //Ex6_9();
+        //Ex6_10();
+        //Ex6_11();
+        //Ex7_1();
+        //Ex7_2();
+        //Ex7_3();
+        //Ex7_4();
+        //Ex7_5();
+        //Ex7_6();
+        Ex7_7();
         //Prac5_4();
     }
 }
