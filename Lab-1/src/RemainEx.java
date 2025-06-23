@@ -22,9 +22,43 @@ public class RemainEx {
             System.out.println("two people dont have the same name");
         }
     }
+    static void Ex5_2 () {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("input num a: ");
+        int a = sc.nextInt();
+        System.out.print("input num b: ");
+        int b = sc.nextInt();
+        System.out.print("input num c: ");
+        int c = sc.nextInt();
+        if (a<=b && b<= c) {
+            System.out.println("increasing.");
+        } else if (a >=b && b>=c) {
+            System.out.println("decreasing.");
+        } else {
+            System.out.println("neither increasing or decreasing.");
+        }
+    }
+    static void Ex5_3 () {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("input num x: ");
+        int x = sc.nextInt();
+        System.out.print("input num y: ");
+        int y = sc.nextInt();
+        if (x>0&&y>0) {
+            System.out.println("("+x+","+y+")"+ " lies in the first Quadrant");
+        } else if (x<0 &&y>0) {
+            System.out.println("("+","+y+")"+" lies in the second Quadrant");
+        } else if (x<0 &&y<0) {
+            System.out.println("("+","+y+")"+" lies in the third Quadrant");
+        } else {
+            System.out.println("("+x+","+y+")"+" lies in the fourth Quadrant");
+        }
+    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Ex5_1();
-        Prac5_4();
+        //Ex5_1();
+        //Ex5_2();
+        Ex5_3();
+        //Prac5_4();
     }
 }
