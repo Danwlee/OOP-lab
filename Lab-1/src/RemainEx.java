@@ -54,11 +54,139 @@ public class RemainEx {
             System.out.println("("+x+","+y+")"+" lies in the fourth Quadrant");
         }
     }
+    static void Ex6_1 () {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("input num n: ");
+        int n = sc.nextInt();
+        for (int i = -n; i <=n; i++) {
+            System.out.print(i+" ");
+        }
+        System.out.println();
+    }
+    static void Ex6_2 () {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("input num a: ");
+        int a = sc.nextInt();
+        System.out.print("input num b: ");
+        int b = sc.nextInt();
+        int sum=0;
+        for (int i = a; i <=b; i++) {
+            sum=sum + i;
+        }
+        System.out.println(sum);
+    }
+    static void Ex6_3 () {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("input num n: ");
+        int n = sc.nextInt();
+        int sum=0;
+        for (int i = 0;i<=n; i++) {
+            if(i%2!=0) {
+                sum=sum+i;
+            }
+        }
+        System.out.println(sum);
+    }
+    static void Ex6_4 () {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("input num a: ");
+        int a = sc.nextInt();
+        System.out.print("input num b: ");
+        int b = sc.nextInt();
+        for (int i = a; i <=b; i++) {
+            if (i%3==0) {
+                System.out.print(i+" ");
+            }
+        }
+    }
+    static void Ex6_5 () {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("input num n: ");
+        int n = sc.nextInt();
+        int fac=1;
+        for (int i=n; i>0;i --) {
+            fac=fac*i;
+        }
+        System.out.println(fac);
+    }
+    static void Ex6_6 () {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("input num n: ");
+        int n = sc.nextInt();
+        for (int i =1;i<=n;i++) {
+            if (n%i==0) {
+                System.out.print(i+" ");
+            }
+        }
+    }
+    static void Ex6_7 () {
+        for (int i = 0;i <=24; i++) {
+            System.out.print(i+" ");
+            if (i%5==4) {
+                System.out.println();
+            }
+        }
+    }
+    static void Ex6_8 () {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("input num n: ");
+        int n = sc.nextInt();
+        int count=0;
+        for (int i=1;i<=n;i++) {
+            if (n%i==0) {
+                count++;
+            }
+        }
+        System.out.println(count);
+    }
+    static void Ex6_9 () {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("input num a: ");
+        int a = sc.nextInt();
+        System.out.print("input num b: ");
+        int b = sc.nextInt();
+        int result=1;
+        for (int i=0;i<b;i++) {
+            result=result*a;
+        }
+        System.out.println(result);
+    }
+    static void Ex6_10 () {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("input num a: ");
+        int a = sc.nextInt();
+        System.out.print("input num b: ");
+        int b = sc.nextInt();
+        for (int i=a;i<=b;i++) {
+            if (i%3==0&&i%5==0) {
+                System.out.println(i+" ");
+            }
+        }
+    }
+    static void Ex6_11 () {
+        System.out.println("all numbers from 1 to 1000 that end in 0.");
+        for (int i=1;i<=1000;i++) {
+            if (i%10==0){
+                System.out.println(i+" ");
+            }
+        }
+    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         //Ex5_1();
         //Ex5_2();
-        Ex5_3();
+        //Ex5_3();
+        //Ex6_1();
+        //x6_2();
+        //Ex6_3();
+        //Ex6_4();
+        //Ex6_5();
+        //Ex6_6();
+        //Ex6_7();
+        //Ex6_8();
+        Ex6_9();
+        Ex6_10();
+        Ex6_11();
         //Prac5_4();
     }
 }
